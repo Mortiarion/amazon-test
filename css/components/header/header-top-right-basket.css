@@ -1,0 +1,25 @@
+.count-basket {
+    position: relative;
+    padding: 8px 25px 8px 10px;
+}
+
+.basket {
+    background-image: url("./../../../img/nav-sprite-global-all.png");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 30px;
+    background-position: 3% 93.4%;
+    display: inline-block;
+}
+
+.count {
+    position: absolute;
+    left: 29%;
+    color: var(--cart-count);
+}
+
+.basket-text {
+    position: absolute;
+    transform: translate(-30%, 80%);
+    font-size: 14px;
+}

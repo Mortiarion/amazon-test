@@ -1,0 +1,68 @@
+.custom-select {
+    position: relative;
+    white-space: nowrap;
+}
+
+.selected {
+    color: var(--selected-triangle);
+    position: relative;
+    background-color: var(--bg-custom-select);
+    border-right: 1px solid var(--border-custom-select);
+    border-radius: 4px 0 0 4px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+    padding: 0 20px 0 15px;
+    height: 40px;
+}
+
+.selected-active {
+    z-index: 1;
+}
+
+.selected:hover {
+    background-color: var(--bg-hover-custom-select);
+    color: var(--black-color);
+}
+
+.selected.triangle::after {
+    position: absolute;
+    right: 0;
+    transform: translate(-100%, 0%);
+}
+
+.container-options {
+    background-color: var(--bg-custom-select);
+    position: absolute;
+    border-radius: 4px;
+    top: 40px;
+    left: 0;
+    overflow: auto;
+    opacity: 0;
+    height: 0;
+    transition: height 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.container-options-active {
+    height: 300px;
+    opacity: 1;
+    z-index: 1;
+}
+
+.option {
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: 0.5s;
+}
+
+.option:hover {
+    background-color: var(--bg-hover-custom-select);
+    border-radius: 4px;
+}
+
+.select-option-selected {
+    border-radius: 4px;
+    background-color: var(--bg-hover-custom-select);
+}
+

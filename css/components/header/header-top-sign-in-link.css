@@ -1,0 +1,19 @@
+.sign-in-link {
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+    padding: 10px 20px 10px 10px;
+}
+
+.sign-in-text-first {
+    font-size: 12px;
+}
+
+.sign-in-text-second {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.sign-in-text-second.triangle::after {
+    transform: translate(70%, 100%);
+}

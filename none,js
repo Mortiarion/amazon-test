@@ -1,0 +1,403 @@
+inputField.addEventListener("input", (event) => {
+    // прослуховувач поля вводу для запису
+    const searchText = event.target.value.toLowerCase(); // тут ми робим щоб поле не було чутливе до верхнього регістру
+    const filteredSuggestions = productNamesArrayAutocomplete.filter(
+        (item) =>
+            // тут ми фільтруєм масив з зпропонованими авто завершеннями
+            item.toLowerCase().startsWith(searchText) // тут ми додаєм те що відфільтрувало тільки не поняв startWith фільтрує по порядку букв. includes по співпадінню в любому слові буква
+    );
+
+    displayAutocompleteSuggestions(filteredSuggestions);
+});
+
+inputField.addEventListener("change", (event) => {
+    if (event.target.value === " ") {
+        displayAutocompleteSuggestions([]);
+    }
+});
+
+const displayAutocompleteSuggestions = (suggestions) => {
+    // функція яка показує і створює запропоновані автозавершення
+    autocompleteContainer.innerHTML = ""; // це для того щоб очищувати контейнер щоб не накопичувались в html лишні search-item
+
+    suggestions.forEach((item) => {
+        // цик для створення такої кількості елементів які наяавні в масиві з продуктами productNamesArrayAutocomplete
+        const searchItem = document.createElement("div");
+        searchItem.classList.add("search-item"); // тут створюєм елемент який буде додаватись до контейнера і даєм йому клас
+        searchItem.textContent = item; // тут присвоюєм textConent з масиву в search-item
+
+        searchItem.addEventListener("click", () => {
+            // тут ми при кліку на search-item міняєм inputField
+            inputField.value = item;
+            autocompleteContainer.innerHTML = ""; // а тут очищаєм контейнер
+        });
+
+        autocompleteContainer.appendChild(searchItem); // додаєм елете до контейнера
+    });
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import { showHideOverlay, overlay } from "./custom-overlay.js";
+
+const containerOptions = document.querySelector(".container-options");
+const selectedOption = document.querySelector(".selected");
+
+let activeIndexSelect = -1;
+const optionsTextArray = [
+    "All Departments",
+    "Automotive",
+    "Arts Crafts",
+    "Baby",
+    "Beauty Personal Care",
+    "Books",
+    "Boys' Fashion",
+    "Computers",
+    "Deals",
+    "Digital Music",
+    "Electronics",
+    "Girls' Fashion",
+    "Health Household",
+    "Home Kitchen",
+    "Industrial Scientific",
+    "Kindle Store",
+    "Luggage",
+    "Men's Fashion",
+    "Movies TV",
+    "Music, CDs Vinyl",
+    "Pet Supplies",
+    "Prime Video",
+    "Software",
+    "Sports Outdoors",
+    "Tools Home Improvement",
+    "Toys Games",
+    "Video Games",
+    "Women's Fashion",
+];
+
+const createdOptions = () => {
+    optionsTextArray.forEach((text) => {
+        const element = document.createElement("div");
+        element.classList.add("option");
+        element.textContent = text;
+        element.setAttribute("tabindex", "0");
+
+        containerOptions.appendChild(element);
+
+        element.addEventListener("click", () => {
+            const optionText = element.textContent;
+            selectedOption.textContent = optionText;
+            openCloseSelected();
+            showHideOverlay(false);
+        });
+
+        element.addEventListener("keydown", (event) => {
+            const lastIndex = optionsTextArray.length - 1;
+
+            if (event.key === "ArrowDown") {
+                event.preventDefault();
+                activeIndexSelect =
+                    activeIndexSelect < lastIndex ? activeIndexSelect + 1 : 0;
+            } else if (event.key === "ArrowUp") {
+                event.preventDefault();
+                activeIndexSelect =
+                    activeIndexSelect > 0 ? activeIndexSelect - 1 : lastIndex;
+            }
+        });
+    });
+};
+
+createdOptions();
+
+const openCloseSelected = () => {
+    selectedOption.classList.toggle("selected-active");
+    containerOptions.classList.toggle("container-options-active");
+};
+
+const handleOpenCloseCustomSelect = (event) => {
+    const isSelectedOption = event.target === selectedOption;
+    const isOverlay = event.target === overlay;
+
+    if (isSelectedOption) {
+        if (selectedOption.classList.contains("selected-active")) {
+            openCloseSelected();
+            showHideOverlay(false);
+        } else {
+            openCloseSelected();
+            showHideOverlay(true);
+        }
+    }
+
+    if (isOverlay) {
+        if (
+            selectedOption.classList.contains("selected-active") &&
+            containerOptions.classList.contains("container-options-active")
+        ) {
+            openCloseSelected();
+        }
+    }
+};
+
+const setActiveOption = () => {
+    const options = containerOptions.querySelectorAll(".option");
+
+    options.forEach((option, index) => {
+        if (index === activeIndexSelect) {
+            option.classList.add("option-active");
+            option.setAttribute("tabindex", "0");
+            option.focus();
+            selectedOption.textContent = option.textContent;
+        } else {
+            option.classList.remove("option-active");
+            option.setAttribute("tabindex", "-1");
+        }
+    });
+};
+
+containerOptions.addEventListener("keydown", (event) => {
+    const lastIndex = optionsTextArray.length - 1;
+
+    if (event.key === "ArrowDown") {
+        event.preventDefault();
+        activeIndexSelect =
+            activeIndexSelect < lastIndex ? activeIndexSelect + 1 : 0;
+        setActiveOption();
+    } else if (event.key === "ArrowUp") {
+        event.preventDefault();
+        activeIndexSelect =
+            activeIndexSelect > 0 ? activeIndexSelect - 1 : lastIndex;
+        setActiveOption();
+    }
+});
+
+optionsTextArray.forEach((text, index) => {
+    const option = containerOptions.children[index];
+    option.addEventListener("click", () => {
+        activeIndexSelect = index;
+        setActiveOption();
+        const optionText = option.textContent;
+        selectedOption.textContent = optionText;
+        openCloseSelected();
+        showHideOverlay(false);
+    });
+});
+
+selectedOption.addEventListener("click", handleOpenCloseCustomSelect);
+overlay.addEventListener("click", handleOpenCloseCustomSelect);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const noSuggestionItem = document.createElement("div");
+noSuggestionItem.classList.add("no-suggestion");
+noSuggestionItem.textContent = "No suggestions found";
+
+const displayNoSuggestions = () => {
+    autocompleteContainer.innerHTML = "";
+    autocompleteContainer.appendChild(noSuggestionItem);
+
+    autocompleteContainer.classList.add("autocomplete-container-active");
+    centerSearchField.classList.add("search-field-active");
+    showOverlay();
+};
+
+const removeNoSuggestions = () => {
+    autocompleteContainer.innerHTML = "";
+
+    autocompleteContainer.classList.remove("autocomplete-container-active");
+    centerSearchField.classList.remove("search-field-active");
+    hideOverlay();
+
+    activeIndex = -1;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="language-dropdown">
+    <div class="triangle"></div>
+    <div id="nav-flyout-icp" class="nav-flyout">
+        <div class="nav-flyout-content nav-template">
+            <span class="nav-item">
+                <span class="nav-text">
+                    Change language
+                </span>
+                <a href="#" class="learn-more">
+                    Learn more
+                </a>
+            </span>
+            <a href="#" class="nav-item">
+                <i class="icp-radio icp-radio-active"></i>
+                <span class="nav-text">
+                    English - EN
+                </span>
+            </a>
+            <div class="nav-divider"></div>
+            <a href="#" class="nav-item nav-link">
+                <span class="nav-text">
+                    <i class="icp-radio"></i>
+                    español - ES
+                </span>
+            </a>
+            <a href="#" class="nav-item nav-link">
+                <span class="nav-text">
+                    <i class="icp-radio"></i>
+                    العربية - AR
+                </span>
+            </a>
+            <a href="#" class="nav-item nav-link">
+                <span class="nav-text">
+                    <i class="icp-radio"></i>
+                    Deutsch - DE
+                </span>
+            </a>
+            <a href="#" class="nav-item nav-link">
+                <span class="nav-text">
+                    <i class="icp-radio"></i>
+                    עברית - HE
+                </span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-text">
+                    <i class="icp-radio"></i>
+                    한국어 - KO
+                </span>
+            </a>
+            <a href="#" class="nav-item nav-link">
+                <span class="nav-text">
+                    <i class="icp-radio"></i>
+                    português - PT
+                </span>
+            </a>
+            <a href="#" class="nav-item nav-link">
+                <span class="nav-text">
+                    <i class="icp-radio"></i>
+                    中文 (简体) -ZH
+                </span>
+            </a>
+            <a href="#" class="nav-item nav-link">
+                <span class="nav-text">
+                    <i class="icp-radio"></i>
+                    中文 (繁體) - ZH
+                </span>
+            </a>
+            <div class="nav-divider"></div>
+            <span class="nav-item">
+                <span class="nav-text">
+                    Change currency
+                    <a href="#" class="learn-more">
+                        Learn more
+                    </a>
+                </span>
+            </span>
+            <span class="nav-item">
+                <span class="nav-text">
+                    <span>$ - USD - US Dollar</span>
+                    <a
+                        href="#"
+                        class="icp-flyout-change"
+                    >
+                        Change
+                    </a>
+                </span>
+            </span>
+            <div class="nav-divider"></div>
+            <span class="nav-item">
+                <span class="nav-text">
+                    <i class="header__navbar-right-flag flag-us"></i>
+                    <span>You are shopping on</span>
+                    <span>Amazon.com</span>
+                </span>
+            </span>
+            <a href="#" class="nav-item">
+                <span class="nav-text">
+                    <div class="change-link">
+                        Change country / region.
+                    </div>
+                </span>
+            </a>
+        </div>
+    </div>
+</div>;

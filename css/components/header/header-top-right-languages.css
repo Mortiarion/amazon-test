@@ -1,0 +1,222 @@
+.languages-menu {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 17px 20px 17px 10px;
+    position: relative;
+}
+
+.languages-name {
+    color: var(--white-color);
+    font-size: 14px;
+    font-weight: 600;
+    position: relative;
+}
+
+.languages-name.triangle::after {
+    transform: translate(50%, 300%);
+}
+
+.languages-flag {
+    background-image: url("./../../../img/nav-sprite-global-country.png");
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 16px;
+    display: inline-block;
+    background-position: 0 -131px;
+    margin: 0 3px 0 0;
+    border-radius: 2px;
+}
+
+
+
+
+
+
+
+
+.language-dropdown {
+    position: absolute;
+    background-color: var(--white-color);
+    padding: 20px;
+    border-radius: 3px;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    pointer-events: auto;
+    border: 1px solid #bbb;
+}
+
+.flex {
+    display: flex;
+    font-size: 13px;
+}
+
+.radio-img {
+    border: 1px solid #9f9f9f;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+
+.language-dropdown-triangle {
+    top: -16px;
+    left: 101px;
+    border-style: solid;
+    border-width: 9px;
+    border-color: transparent;
+    border-bottom: 9px solid #fff;
+    position: absolute;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.trio-duo {
+    top: -20px;
+    left: 99px;
+    border-style: solid;
+    border-width: 10px;
+    border-color: transparent;
+    border-bottom: 10px solid #ccc;
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.divider {
+    line-height: 1px;
+    height: 1px;
+    background-color: #eee;
+    margin: 0 0 9px;
+}
+
+.language-item {
+    color: #444444;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+}
+
+.learn-more,
+.change-dollar {
+    color: #007185;
+    font-size: 11px;
+}
+
+.change-language,
+.change-currency {
+    font-size: 13px;
+
+}
+
+.dollar {
+    font-size: 13px;
+}
+
+.flag-img {
+    background-image: url("./../../../img/nav-sprite-global-country.png");
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 11px;
+    background-position: 30.6% 38.2%;
+    border-radius: 2px;
+
+}
+.flag-shopping {
+
+}
+.flag-amazon {
+
+}
+.change-region-country {
+    color: #0066C0;
+    font-size: 13px;
+
+}
+
+.hover__element {
+  display: block;
+  top: 5%;
+  right: 9.7%;
+  position: absolute;
+  width: 240px;
+  background-color: #fff;
+  z-index: 999;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  padding: 15px;
+}
+.hover__element .triangle {
+  top: -19px;
+  left: 99px;
+  border-style: solid;
+  border-width: 10px;
+  border-color: transparent;
+  border-bottom: 10px solid white;
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}
+.hover__element span,
+.hover__element a {
+  color: #000000;
+  font-size: 13px;
+}
+.hover__element .nav-item {
+  display: block;
+  margin-bottom: 10px;
+}
+.hover__element .nav-divider {
+  position: relative;
+  display: block;
+  line-height: 1px;
+  height: 1px;
+  overflow: hidden;
+  background: #eee;
+  margin: 0 0 9px;
+}
+.hover__element .icp-radio {
+  margin: 0 0.5em 0 0;
+  position: relative;
+  top: 3px;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-image: url("./../nav-sprite-global-country.png");
+  background-position: -75px -2px;
+}
+.hover__element a:hover .icp-radio {
+  background-position: -123px -2px;
+}
+.hover__element .icp-radio-active {
+  background-position: -99px -2px;
+}
+.hover__element .nav-link.nav-item:hover .nav-text:hover {
+  color: #e47911;
+  text-decoration: underline;
+}
+.hover__element .learn-more,
+.hover__element .icp-flyout-change {
+  color: #007185;
+  font-size: 11px;
+  margin-left: 15px;
+}
+.hover__element .learn-more:hover,
+.hover__element .icp-flyout-change:hover {
+  text-decoration: underline;
+  color: #e47911;
+}
+.hover__element .flag-us.header__navbar-right-flag {
+  display: inline-block;
+  position: absolute;
+  border-radius: 3px;
+}
+.hover__element .change-link {
+  color: #0066c0;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 13px;
+}
+.hover__element .change-link:hover {
+  text-decoration: underline;
+}

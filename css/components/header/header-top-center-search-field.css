@@ -1,0 +1,72 @@
+.center-search-field {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.search-field {
+    border: none;
+    padding-block: 0;
+    padding-inline: 10px;
+    height: 40px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.search-field-active {
+    position: relative;
+    z-index: 1;
+}
+
+.search {
+    padding: 20px;
+    background-image: url("./../../../img/nav-sprite-global-all.png");
+    background-position: 0% 68%;
+    background-repeat: no-repeat;
+    background-color: var(--bg-search-btn);
+    border-radius: 0 4px 4px 0;
+    border-left: 1px solid var(--border-custom-select);
+    transition: 0.5s;
+}
+
+.search:hover {
+    background-color: var(--hover-search-btn);
+}
+
+.autocomplete-container {
+    max-height: 0;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+
+.autocomplete-container-active {
+    max-height: 0;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 1;
+}
+
+.search-item,
+.no-suggestion {
+    padding: 5px 10px;
+    background: var(--bg-custom-select);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.search-item:hover {
+    background-color: var(--bg-hover-custom-select);
+}
+
+.selected-autocomplete-item {
+    background-color: var(--bg-hover-custom-select);
+}
+
+.no-suggestion {
+    pointer-events: none;
+    cursor: default;
+    font-weight: 600;
+}

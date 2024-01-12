@@ -1,0 +1,19 @@
+.return-orders {
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+    padding: 10px 20px 10px 10px;
+}
+
+.return {
+    font-size: 12px;
+}
+
+.orders {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.orders.triangle::after {
+    transform: translate(70%, 100%);
+}
