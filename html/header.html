@@ -6,13 +6,36 @@
                     <a href="index.html" class="logo-bg">
                         <div class="logo animation-border"></div>
                     </a>
-                    <a href="#" class="location animation-border">
+                    <button class="location animation-border">
                         <div class="location-wrapper">
                             <span class="deliver">Deliver to</span>
                             <span class="region">Ukraine</span>
                         </div>
                         <span class="bg-location"></span>
-                    </a>
+                    </button>
+                    <div class="location-popup">
+                        <h3 class="choose-location">Choose your location</h3>
+                        <div class="location-popup-wrapper">
+                            <p class="location-text">
+                                Delivery options and delivery speeds may vary for different locations
+                            </p>
+                            <button class="location-button">Sign in to see your addresses</button>
+                            <div class="divider-break">
+                                <span class="divider-break-text">or enter a US zip code</span>
+                            </div>
+                            <form class="location-popup-form">
+                                <input type="text" class="enter-zip-code">
+                                <button class="apply">Apply</button>
+                            </form>
+                            <div class="divider-break">
+                                <span class="divider-break-text">or</span>
+                            </div>
+                            <div class="custom-select-country">
+                                <div class="selected-country">Ukraine</div>
+                            </div>
+                            <button class="done">Done</button>
+                        </div>
+                    </div>
                 </div>
                 <div class="nav-top-center">
                     <div class="custom-select">
@@ -31,77 +54,77 @@
                     <button class="languages-menu animation-border">
                         <span class="languages-name triangle">EN</span>
                         <span class="languages-flag"></span>
-                        <div class="language-dropdown">
-                            <div class="language-dropdown-triangle"></div>
-                            <div class="trio-duo"></div>
-                            <div class="flex">
-                                <span class="change-language">Change language</span>
-                                <a href="#" class="learn-more">Learn more</a>
-                            </div>
-                            <a href="#" class="language-item">
-                                <span class="radio-img radio-active"></span>
-                                <span class="item-text">English - EN</span>
-                            </a>
-                            <div class="divider"></div>
-                            <a href="#" class="language-item">
-                                <span class="radio-img"></span>
-                                <span class="item-text">español - ES</span>
-                            </a>
-                            <a href="#" class="language-item">
-                                <span class="radio-img"></span>
-                                <span class="item-text">العربية - AR</span>
-                            </a>
-                            <a href="#" class="language-item">
-                                <span class="radio-img"></span>
-                                <span class="item-text">Deutsch - DE</span>
-                            </a>
-                            <a href="#" class="language-item">
-                                <span class="radio-img"></span>
-                                <span class="item-text">עברית - HE</span>
-                            </a>
-                            <a href="#" class="language-item">
-                                <span class="radio-img"></span>
-                                <span class="item-text">한국어 - KO</span>
-                            </a>
-                            <a href="#" class="language-item">
-                                <span class="radio-img"></span>
-                                <span class="item-text">português - PT</span>
-                            </a>
-                            <a href="#" class="language-item">
-                                <span class="radio-img"></span>
-                                <span class="item-text">中文 (简体) - ZH</span>
-                            </a>
-                            <a href="#" class="language-item">
-                                <span class="radio-img"></span>
-                                <span class="item-text">中文 (繁體) - ZH</span>
-                            </a>
-                            <div class="divider"></div>
-                            <div class="flex">
-                                <span class="change-currency">Change currency</span>
-                                <a href="#" class="learn-more">Learn more</a>
-                            </div>
-                            <div class="flex">
-                                <span class="dollar">$ - USD - US Dollar</span>
-                                <a href="#" class="change-dollar">Change</a>
-                            </div>
-                            <div class="divider"></div>
-                            <div class="flex">
-                                <span class="flag-img"></span>
-                                <span class="flag-shopping">You are shopping on</span>
-                                <span class="flag-amazon">Amazon.com</span>
-                            </div>
-                            <a href="#" class="change-link">
-                                <span class="change-region-country">Change country/regino.</span>
-                            </a>
-                        </div>
                     </button>
-                    <a href="#" class="sign-in-link animation-border">
+                    <div class="language-dropdown">
+                        <div class="language-dropdown-triangle"></div>
+                        <div class="trio-duo"></div>
+                        <div class="flex">
+                            <span class="change-language">Change language</span>
+                            <a href="#" class="learn-more">Learn more</a>
+                        </div>
+                        <div class="language-item">
+                            <input id="englishCheckbox" class="checkbox" name="checkbox" type="checkbox" checked>
+                            <label for="englishCheckbox">English - EN</label>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="language-item">
+                            <input id="spanishCheckbox" class="checkbox" name="checkbox" type="checkbox">
+                            <label for="spanishCheckbox">español - ES</label>
+                        </div>
+                        <div class="language-item">
+                            <input id="arabicCheckbox" class="checkbox" name="checkbox" type="checkbox">
+                            <label for="arabicCheckbox">العربية - AR</label>
+                        </div>
+                        <div class="language-item">
+                            <input id="germanCheckbox" class="checkbox" name="checkbox" type="checkbox">
+                            <label for="germanCheckbox">Deutsch - DE</label>
+                        </div>
+                        <div class="language-item">
+                            <input id="hebrewCheckbox" class="checkbox" name="checkbox" type="checkbox">
+                            <label for="hebrewCheckbox">עברית - HE</label>
+                        </div>
+                        <div class="language-item">
+                            <input id="koreanCheckbox" class="checkbox" name="checkbox" type="checkbox">
+                            <label for="koreanCheckbox">한국어 - KO</label>
+                        </div>
+                        <div class="language-item">
+                            <input id="portugueseCheckbox" class="checkbox" name="checkbox" type="checkbox">
+                            <label for="portugueseCheckbox">português - PT</label>
+                        </div>
+                        <div class="language-item">
+                            <input id="simplifiedChineseCheckbox" class="checkbox" name="checkbox" type="checkbox">
+                            <label for="simplifiedChineseCheckbox">中文 (简体) - ZH</label>
+                        </div>
+                        <div class="language-item">
+                            <input id="traditionalChineseCheckbox" class="checkbox" name="checkbox" type="checkbox">
+                            <label for="traditionalChineseCheckbox">中文 (繁體) - ZH</label>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="flex">
+                            <span class="change-currency">Change currency</span>
+                            <a href="#" class="learn-more">Learn more</a>
+                        </div>
+                        <div class="flex">
+                            <span class="dollar">$ - USD - US Dollar</span>
+                            <a href="#" class="change-dollar">Change</a>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="flex">
+                            <span class="flag-img"></span>
+                            <span class="flag-shopping">You are shopping on</span>
+                            <span class="flag-amazon">Amazon.com</span>
+                        </div>
+                        <a href="#" class="change-link">
+                            <span class="change-region-country">Change country/regino.</span>
+                        </a>
+                    </div>
+                    <button href="#" class="sign-in-link animation-border">
                         <span class="sign-in-text-first">Hello, sign in</span>
                         <span class="sign-in-text-second triangle">Account & Lists</span>
-                    </a>
+                    </button>
                     <a href="#" class="return-orders animation-border">
                         <span class="return">Returns</span>
-                        <span class="orders triangle">& Orders</span>
+                        <span class="orders">& Orders</span>
                     </a>
                     <a href="#" class="count-basket animation-border">
                         <span class="basket"></span>

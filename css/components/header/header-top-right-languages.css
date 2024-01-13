@@ -3,6 +3,13 @@
     flex-direction: row-reverse;
     padding: 17px 20px 17px 10px;
     position: relative;
+    background-color: rgba(255, 255, 255, 0);
+    transition: background-color 0.5s ease-in-out;
+}
+
+.languages-menu-active {
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .languages-name {
@@ -10,6 +17,7 @@
     font-size: 14px;
     font-weight: 600;
     position: relative;
+    pointer-events: none;
 }
 
 .languages-name.triangle::after {
@@ -25,17 +33,13 @@
     background-position: 0 -131px;
     margin: 0 3px 0 0;
     border-radius: 2px;
+    pointer-events: none;
 }
-
-
-
-
-
-
-
 
 .language-dropdown {
     position: absolute;
+    top: 92%;
+    left: -13%;
     background-color: var(--white-color);
     padding: 20px;
     border-radius: 3px;
@@ -44,43 +48,68 @@
     flex-direction: column;
     pointer-events: auto;
     border: 1px solid #bbb;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+    z-index: -1;
 }
 
-.flex {
-    display: flex;
-    font-size: 13px;
+.language-dropdown-active {
+    opacity: 1;
+    z-index: 2;
 }
 
-.radio-img {
-    border: 1px solid #9f9f9f;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    display: inline-block;
-}
-
-.language-dropdown-triangle {
+.language-dropdown:after {
+    content: "";
     top: -16px;
     left: 101px;
     border-style: solid;
-    border-width: 9px;
+    border-width: 8px;
     border-color: transparent;
-    border-bottom: 9px solid #fff;
+    border-bottom: 8px solid #fff;
     position: absolute;
     z-index: 2;
     pointer-events: none;
 }
 
-.trio-duo {
-    top: -20px;
-    left: 99px;
+.language-dropdown:before {
+    content: "";
+    top: -18px;
+    left: 100px;
     border-style: solid;
-    border-width: 10px;
+    border-width: 9px;
     border-color: transparent;
-    border-bottom: 10px solid #ccc;
+    border-bottom: 9px solid #ccc;
     position: absolute;
     z-index: 1;
     pointer-events: none;
+}
+
+.flex {
+    display: flex;
+    font-size: 13px;
+    color: #444;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 7px 0;
+}
+
+.radio-img {
+    border: 1px solid #9f9f9f;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    position: relative;
+}
+
+.radio-img .radio-active {
+    background-color: #e87121;
+    left: 10.1%;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    position: absolute;
+    border: none;
 }
 
 .divider {
@@ -94,7 +123,8 @@
     color: #444444;
     font-size: 13px;
     display: flex;
-    align-items: center;
+    margin: 0 0 7px 0;
+    gap: 6px;
 }
 
 .learn-more,
@@ -106,7 +136,6 @@
 .change-language,
 .change-currency {
     font-size: 13px;
-
 }
 
 .dollar {
@@ -120,103 +149,79 @@
     height: 11px;
     background-position: 30.6% 38.2%;
     border-radius: 2px;
-
+    margin: 0 5px 0 0;
 }
 .flag-shopping {
-
+    margin: 0 5px 0 0;
 }
-.flag-amazon {
 
+.change-link {
+    margin: 0 auto;
 }
+
 .change-region-country {
-    color: #0066C0;
+    color: #0066c0;
     font-size: 13px;
-
 }
 
-.hover__element {
-  display: block;
-  top: 5%;
-  right: 9.7%;
-  position: absolute;
-  width: 240px;
-  background-color: #fff;
-  z-index: 999;
-  border: 1px solid #bbb;
-  border-radius: 3px;
-  padding: 15px;
+[type="checkbox"] {
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    appearance: none;
 }
-.hover__element .triangle {
-  top: -19px;
-  left: 99px;
-  border-style: solid;
-  border-width: 10px;
-  border-color: transparent;
-  border-bottom: 10px solid white;
-  position: absolute;
-  z-index: 1;
-  pointer-events: none;
+
+[type="checkbox"] {
+    position: relative;
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
 }
-.hover__element span,
-.hover__element a {
-  color: #000000;
-  font-size: 13px;
+
+[type="checkbox"]::before,
+[type="checkbox"]::after {
+    position: absolute;
+    display: block;
+    content: "";
 }
-.hover__element .nav-item {
-  display: block;
-  margin-bottom: 10px;
+
+[type="checkbox"]::before {
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    border: 1px solid #9f9f9f;
+    border-radius: 50%;
 }
-.hover__element .nav-divider {
-  position: relative;
-  display: block;
-  line-height: 1px;
-  height: 1px;
-  overflow: hidden;
-  background: #eee;
-  margin: 0 0 9px;
+
+[type="checkbox"]::after {
+    top: 4px;
+    left: 4px;
+    width: 6px;
+    height: 6px;
+    /* border-bottom: 5px solid #ee8013; */
+    /* border-left: 5px solid #ee8013; це можна використати як галочку*/
+    /* transform: rotate(-45deg); */
+    border-radius: 50%;
+    background-color: #ee8013;
+    transition: opacity 0.3s;
+    opacity: 0;
 }
-.hover__element .icp-radio {
-  margin: 0 0.5em 0 0;
-  position: relative;
-  top: 3px;
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  background-image: url("./../nav-sprite-global-country.png");
-  background-position: -75px -2px;
+
+[type="checkbox"]:checked::after {
+    opacity: 1;
 }
-.hover__element a:hover .icp-radio {
-  background-position: -123px -2px;
+
+label {
+    color: #444;
+    font-size: 13px;
+    cursor: pointer;
 }
-.hover__element .icp-radio-active {
-  background-position: -99px -2px;
-}
-.hover__element .nav-link.nav-item:hover .nav-text:hover {
-  color: #e47911;
-  text-decoration: underline;
-}
-.hover__element .learn-more,
-.hover__element .icp-flyout-change {
-  color: #007185;
-  font-size: 11px;
-  margin-left: 15px;
-}
-.hover__element .learn-more:hover,
-.hover__element .icp-flyout-change:hover {
-  text-decoration: underline;
-  color: #e47911;
-}
-.hover__element .flag-us.header__navbar-right-flag {
-  display: inline-block;
-  position: absolute;
-  border-radius: 3px;
-}
-.hover__element .change-link {
-  color: #0066c0;
-  margin: 0 auto;
-  text-align: center;
-  font-size: 13px;
-}
-.hover__element .change-link:hover {
-  text-decoration: underline;
+
+label:hover {
+    text-decoration: underline;
+    color: #e47911;
 }

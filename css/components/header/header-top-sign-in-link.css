@@ -3,6 +3,7 @@
     flex-direction: column;
     white-space: nowrap;
     padding: 10px 20px 10px 10px;
+    color: var(--white-color);
 }
 
 .sign-in-text-first {

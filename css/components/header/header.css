@@ -25,6 +25,7 @@
     display: flex;
     align-items: center;
     margin: 0 10px 0 0;
+    position: relative;
 }
 
 .nav-top-center {
@@ -37,4 +38,5 @@
 .nav-top-right {
     display: flex;
     align-items: center;
+    position: relative;
 }
