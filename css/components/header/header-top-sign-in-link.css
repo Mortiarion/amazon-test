@@ -8,11 +8,13 @@
 
 .sign-in-text-first {
     font-size: 12px;
+    pointer-events: none;
 }
 
 .sign-in-text-second {
     font-size: 14px;
     font-weight: 600;
+    pointer-events: none;
 }
 
 .sign-in-text-second.triangle::after {

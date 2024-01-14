@@ -1,4 +1,3 @@
-// console.log("Starting");
 import { showOverlay, hideOverlay, overlay } from "./custom-overlay.js";
 
 const location = document.querySelector(".location");
@@ -13,12 +12,6 @@ const closeLocationPopup = () => {
 };
 
 const handleClickLocationPopup = (event) => {
-    // !locationPopup.classList.contains("location-popup-active")
-    //     ? openLocationPopup()
-    //     : closeLocationPopup();
-    // !overlay.classList.contains("overlay-active")
-    //     ? showOverlay()
-    //     : hideOverlay();
     const isLocation = event.target === location;
     if (isLocation) {
         if (!locationPopup.classList.contains("location-popup-active")) {

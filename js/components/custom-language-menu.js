@@ -14,22 +14,6 @@ const closeLanguageDropdown = () => {
 };
 
 const handleLanguageMenuClick = (event) => {
-    // const isLanguageMenu = event.target === languageMenu;
-    // languageDropdown.classList.contains("language-dropdown-active")
-    //     ? closeLanguageDropdown()
-    //     : openLanguageDropdown();
-    // languageDropdown.classList.contains("language-dropdown-active")
-    //     ? showOverlay()
-    //     : hideOverlay();
-    // overlay.classList.contains("overlay-active")
-    //     ? null
-    //     : closeLanguageDropdown();
-
-    // languageDropdown.classList.contains("language-dropdown-active")
-    //     ? (closeLanguageDropdown(),
-    //       overlay.classList.contains("overlay-active") ? null : hideOverlay())
-    //     : (openLanguageDropdown(), showOverlay());
-
     const isLanguageMenu = event.target === languageMenu;
     if (isLanguageMenu) {
         if (!languageDropdown.classList.contains("language-dropdown-active")) {
@@ -43,13 +27,6 @@ const handleLanguageMenuClick = (event) => {
         closeLanguageDropdown();
         hideOverlay();
     }
-
-    // const isLanguageMenu = event.target === languageMenu;
-    // isLanguageMenu
-    //     ? !languageDropdown.classList.contains("language-dropdown-active")
-    //         ? (openLanguageDropdown(), showOverlay())
-    //         : null
-    //     : (closeLanguageDropdown(), hideOverlay());
 };
 
 languageMenu.addEventListener("click", handleLanguageMenuClick);

@@ -5,6 +5,7 @@
 @import "./header-top-sign-in-link.css";
 @import "./header-top-right-return-orders.css";
 @import "./header-top-right-basket.css";
+@import "./header-bottom.css";
 
 .header {
     background-color: var(--nav-top-bg);
@@ -39,4 +40,11 @@
     display: flex;
     align-items: center;
     position: relative;
+}
+
+.nav-bottom {
+    display: flex;
+    background-color: #232f3e;
+    position: relative;
+    margin: 2px 0;
 }
