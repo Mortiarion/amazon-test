@@ -1,6 +1,7 @@
 @import url("./components/header/header.css");
 @import url("./components/custom-scroll-bar.css");
 @import url("./components/overlay.css");
+@import url("./components/main/main.css");
 
 :root {
     --nav-top-bg: #131921;
@@ -104,4 +105,8 @@ ol {
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+
+img {
+    width: 100%;
 }

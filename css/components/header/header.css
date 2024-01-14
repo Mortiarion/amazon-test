@@ -7,6 +7,11 @@
 @import "./header-top-right-basket.css";
 @import "./header-bottom.css";
 
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
 .header {
     background-color: var(--nav-top-bg);
 }
@@ -19,14 +24,13 @@
 .nav-top {
     padding: 5px;
     display: flex;
-    justify-content: space-between;
 }
 
 .nav-top-left {
     display: flex;
     align-items: center;
     margin: 0 10px 0 0;
-    position: relative;
+    /* position: relative; */
 }
 
 .nav-top-center {
@@ -45,6 +49,6 @@
 .nav-bottom {
     display: flex;
     background-color: #232f3e;
-    position: relative;
-    margin: 2px 0;
+    /* position: relative; */
+    padding: 2px 0;
 }

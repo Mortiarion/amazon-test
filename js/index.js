@@ -3,3 +3,4 @@ import "./components/custom-autocomplite-searchfield.js";
 import "./components/custom-language-menu.js";
 import "./components/custom-location-popup.js";
 import "./components/custom-side-menu.js";
+import "./components/custom-slider.js";
