@@ -1,3 +1,93 @@
+const customSlider = document.querySelector(".custom-slider");
+const slider = customSlider.querySelector(".slider-track");
+const prevButton = document.querySelector(".prev-button");
+const nextButton = document.querySelector(".next-button");
+let slides = [...slider.children];
+
+slider.prepend(slides[slides.length - 1]);
+
+const handleArrowClick = (arrow) => {
+    arrow.addEventListener("click", () => {
+        slides = [...slider.children];
+        const currSlide = slider.querySelector(".is-selected");
+        currSlide.classList.remove("is-selected");
+        let targetSlide;
+
+        if (arrow.classList.contains("prev-button")) {
+            targetSlide = currSlide.previousElementSibling;
+            slider.prepend(slides[slides.length - 1]);
+        }
+
+        if (arrow.classList.contains("next-button")) {
+            targetSlide = currSlide.nextElementSibling;
+            slider.append(slides[0]);
+        }
+
+        targetSlide.classList.add("is-selected");
+    });
+};
+
+const buttons = customSlider.querySelectorAll(".slider-button");
+buttons.forEach(handleArrowClick);
+
+const prevBtn = buttons[0];
+const nextBtn = buttons[1];
+
+const slideTiming = 5000;
+let interval;
+const slideInterval = () =>
+    (interval = setInterval(() => nextBtn.click(), slideTiming));
+
+customSlider.addEventListener("mouseover", () => clearInterval(interval));
+customSlider.addEventListener("mouseleave", slideInterval);
+slideInterval();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const elements = document.querySelectorAll("[data-include]");
 const totalPartials = elements.length;
 let processedPartials = 0;

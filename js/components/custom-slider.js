@@ -1,33 +1,46 @@
-const sliderWrapper = document.querySelector(".slider-wrapper");
-const slides = document.querySelectorAll(".slide");
+const customSlider = document.querySelector(".custom-slider");
+const slider = document.querySelector(".slider");
+const sliderTrack = document.querySelector(".slider-track");
 const prevButton = document.querySelector(".prev-button");
 const nextButton = document.querySelector(".next-button");
+let slides = [...sliderTrack.children];
 
-let currentIndex = 0;
-let slideInterval = setInterval(() => changeSlide(1), 4000);
+sliderTrack.prepend(slides[slides.length - 1]);
 
-const changeSlide = (direction) => {
-    const totalSlides = slides.length;
+const handleArrowClick = (arrow) => {
+    arrow.addEventListener("click", () => {
+        slides = [...sliderTrack.children];
+        const currentSlide = sliderTrack.querySelector(".is-selected");
+        currentSlide.classList.remove("is-selected");
+        let targetSlide;
 
-    currentIndex += direction;
+        if (arrow.classList.contains("prev-button")) {
+            targetSlide = currentSlide.previousElementSibling;
+            sliderTrack.prepend(slides[slides.length - 1]);
+        }
 
-    if (currentIndex < 0) {
-        currentIndex = totalSlides - 1;
-    } else if (currentIndex >= totalSlides) {
-        currentIndex = 0;
-    }
+        if (arrow.classList.contains("next-button")) {
+            targetSlide = currentSlide.nextElementSibling;
+            sliderTrack.append(slides[0]);
+        }
 
-    const translateValue = -currentIndex * 100 + "%";
-    sliderWrapper.style.transform = "translateX(" + translateValue + ")";
+        targetSlide.classList.add("is-selected");
+    });
 };
 
-prevButton.addEventListener("click", () => changeSlide(-1));
-nextButton.addEventListener("click", () => changeSlide(1));
+const buttons = document.querySelectorAll(".slider-button");
+buttons.forEach(handleArrowClick);
 
-sliderWrapper.addEventListener("mouseenter", () => {
-    clearInterval(slideInterval);
-});
+const prevBtn = buttons[0];
+const nextBtn = buttons[1];
 
-sliderWrapper.addEventListener("mouseleave", () => {
-    slideInterval = setInterval(() => changeSlide(-1), 5000);
-});
+const slideTiming = 5000;
+let interval;
+
+const slideInterval = () =>
+    (interval = setInterval(() => nextBtn.click(), slideTiming));
+
+customSlider.addEventListener("mouseover", () => clearInterval(interval));
+customSlider.addEventListener("mouseleave", slideInterval);
+
+slideInterval();
