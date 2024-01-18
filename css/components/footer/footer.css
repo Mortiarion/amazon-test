@@ -1,1 +1,189 @@
 @import url("./go-top.css");
+
+.footer {
+    background-color: #232f3e;
+}
+.go__top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #37475a;
+    width: 100%;
+    height: 50px;
+    transition: 0.3s;
+}
+.go__top a {
+    color: #fff;
+    font-size: 13px;
+}
+.go__top:hover {
+    opacity: 0.8;
+}
+.footer__container {
+    justify-content: center;
+}
+.footer__top {
+    display: flex;
+    padding: 20px 0 20px;
+    width: 100%;
+    justify-content: space-around;
+}
+.footer__top h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.footer__top a {
+    color: #ddd;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.footer__top a:hover {
+    text-decoration: underline;
+}
+.footer__top .link__list {
+    display: flex;
+    flex-direction: column;
+}
+.footer__top .link__list:nth-child(1),
+.footer__top .link__list:nth-child(2),
+.footer__top .link__list:nth-child(3),
+.footer__top .link__list:nth-child(4) {
+    margin-left: 15px;
+}
+.footer__link-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #999;
+    padding: 20px 0 30px;
+}
+.footer__link {
+    display: flex;
+    align-items: center;
+}
+.footer-line-1,
+.footer-line-2,
+.footer-line-3 {
+    border: 1px solid #848688;
+    border-radius: 3px;
+    padding: 10px 20px 10px 10px;
+    font-size: 13px;
+    margin-left: 5px;
+}
+.footer-line-1 span,
+.footer-line-1 .footer__dolar,
+.footer-line-2 span,
+.footer-line-2 .footer__dolar,
+.footer-line-3 span,
+.footer-line-3 .footer__dolar {
+    color: #ccc;
+}
+.footer-line-1 {
+    margin-left: 30px;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+}
+.footer-line-1 .footer__link-globus {
+    background-image: url("./../../../img/nav-sprite-global-country.png");
+    width: 18px;
+    height: 14px;
+    background-position: 43% 18.4%;
+}
+.footer-line-1 .footer__link-globus span {
+    display: inline-block;
+}
+.footer-line-1 .footer__arrow-up.triangle,
+.footer-line-1 .footer__arrow-down.triangle {
+    position: absolute;
+    top: 50%;
+    border-width: 3px;
+}
+.footer-line-1 .footer__arrow-up.triangle {
+    right: 15px;
+    bottom: 45%;
+}
+.footer-line-1 .footer__arrow-down.triangle {
+    transform: rotate(180deg);
+    right: 7px;
+    top: 45%;
+}
+.footer-line-3 {
+    display: flex;
+}
+.footer-line-3 .header__navbar-right-flag {
+    height: 13px;
+    margin-right: 5px;
+}
+.footer__description-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+    background-color: #131a22;
+}
+.footer__description-wrapper .title {
+    color: #ddd;
+    margin-bottom: 5px;
+}
+.footer__description-wrapper .text {
+    color: #999;
+    font-size: 12px;
+}
+.footer__description-wrapper a {
+    display: flex;
+    flex-direction: column;
+}
+.footer__description-wrapper a:hover {
+    text-decoration: underline;
+    color: #ddd;
+}
+.footer__description-wrapper li {
+    margin-bottom: 30px;
+    width: 100px;
+    height: 60px;
+}
+.footer__description-wrapper ul {
+    margin-right: 30px;
+}
+.footer__description-wrapper ul:last-child {
+    margin-right: 0px;
+}
+.footer__copy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0 25px;
+    background-color: #131a22;
+}
+.footer__copy ul {
+    display: flex;
+    align-items: center;
+}
+.footer__copy ul li {
+    margin-right: 10px;
+}
+.footer__copy ul li:last-child {
+    margin-right: 0;
+}
+.footer__copy ul li a:hover {
+    text-decoration: underline;
+}
+.footer__copy a,
+.footer__copy span {
+    color: #ddd;
+    font-size: 12px;
+}
+.footer__copy .footer__privacy {
+    background-image: url("./../../../img/nav-sprite-global-1x-reorg-privacy.png");
+    width: 29px;
+    height: 14px;
+    background-position: 42.5% 87.2%;
+    display: inline-block;
+    margin-left: 5px;
+}
+.footer__copy li:last-child {
+    display: flex;
+    align-items: flex-end;
+}
