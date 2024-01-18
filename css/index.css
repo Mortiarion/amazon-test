@@ -2,6 +2,7 @@
 @import url("./components/custom-scroll-bar.css");
 @import url("./components/overlay.css");
 @import url("./components/main/main.css");
+@import url("./components/footer/footer.css");
 
 :root {
     --nav-top-bg: #131921;
@@ -39,6 +40,8 @@ body {
 
 .main {
     flex: 1 1 auto;
+    position: relative;
+    background-color: #e3e6e6;
 }
 
 .animation-border {

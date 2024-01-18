@@ -12,6 +12,17 @@
 .slider-track {
     position: relative;
 }
+.custom-slider-container:after {
+    background: linear-gradient(-180deg, rgba(234, 237, 237, 0), #e3e6e6);
+    bottom: 0;
+    content: "";
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 250px;
+    z-index: 3;
+}
 
 .slide,
 .slider-image {
@@ -62,8 +73,10 @@
 .prev-button,
 .next-button {
     position: absolute;
-    top: 50%;
+    top: 23%;
     transform: translateY(-50%);
+    height: 250px;
+    width: 80px;
 }
 
 .prev-button::after,

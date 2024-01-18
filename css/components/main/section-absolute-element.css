@@ -1,0 +1,59 @@
+.absolute-element {
+    margin-bottom: -290px;
+}
+
+.absolute-element-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transform: translateY(-41%);
+    position: relative;
+    z-index: 3;
+}
+
+.absolute-content-item {
+    width: 33.333%;
+    background-color: var(--white-color);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.absolute-center {
+    margin: 0 0 20px 0;
+    height: 100%;
+}
+
+.absolute-content-box-link {
+    color: #0f1111;
+    width: 100%;
+}
+
+.absolute-content-box-link span {
+    font-size: 12px;
+}
+
+.absolute-row {
+    display: flex;
+    margin: 0 0 10px 0;
+    gap: 10px;
+}
+
+.absolute-top {
+    margin: 0 0 10px 0;
+}
+
+.absolute-content-box-title {
+    font-size: 21px;
+    font-weight: 900;
+}
+
+.absolute-bottom a {
+    color: #007185;
+}
+
+.absolute-content-box {
+    display: flex;
+    gap: 15px;
+    margin: 0 15px;
+}
