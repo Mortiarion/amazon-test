@@ -22,7 +22,7 @@
     position: absolute;
     right: 0;
     top: 250px;
-    z-index: 3;
+    /* z-index: 3; */
 }
 
 .slide,

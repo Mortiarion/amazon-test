@@ -7,8 +7,8 @@
     flex-direction: column;
     gap: 15px;
     transform: translateY(-41%);
-    position: relative;
-    z-index: 3;
+    /* position: relative; */
+    /* z-index: 3; */
 }
 
 .absolute-content-item {
