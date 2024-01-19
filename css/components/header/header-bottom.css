@@ -173,3 +173,66 @@
 .side-inner-divider {
     display: none;
 }
+
+
+
+
+
+
+.side-menu-other {
+    position: absolute;
+    top: 52px;
+    background-color: var(--white-color);
+    width: 0;
+    z-index: -1;
+    bottom: 0;
+    opacity: 0;
+    /* overflow-y: hidden; */
+    transition: opacity 0.5s ease-in-out, width 0.5s ease-in-out;
+}
+.side-menu-other-active {
+    width: 355px;
+    z-index: 3;
+    opacity: 1;
+}
+.side-menu-main {
+    width: 100%;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+.side-menu-main-hide {
+    width: 0;
+    opacity: 0;
+}
+.side-menu-list {
+}
+.go-back-main-menu {
+    color: #111;
+    font-weight: 900;
+    font-size: 14px;
+    padding: 20px 0 10px 25px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.go-back-main-menu::before {
+    content: "";
+    background-image: url(./../../../img/nav-sprite-global-all.png);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 14px;
+    display: inline-block;
+    background-position: 41% 71%;
+    margin: 0 10px 0 0;
+    pointer-events: none;
+}
+.side-menu-title {
+}
+
+
+
+
+
+
+
