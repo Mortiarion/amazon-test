@@ -72,6 +72,7 @@ const handleReadersBooksClick = () => {
     if (!sideMenuReadersBook.classList.contains("side-menu-other-active")) {
         sideMenuReadersBook.classList.add("side-menu-other-active");
         sideMenu.classList.add("amazon-music-hide");
+        sideMenuMain.classList.add("side-menu-main-hide");
     }
 };
 
