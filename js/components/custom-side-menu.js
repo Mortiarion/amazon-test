@@ -20,9 +20,8 @@ sideMenuButtonClose.addEventListener("click", closeSideMenu);
 
 const amazonMusic = document.getElementById("amazon-music");
 const sideMenuOther = document.querySelector(".side-menu-other");
-const goBackMainMenu = document.querySelector(".go-back-main-menu");
+const goBackMainMenu = document.querySelectorAll(".go-back-main-menu");
 const sideMenuMain = document.querySelector(".side-menu-main");
-console.log(goBackMainMenu);
 
 const openSideMenuOther = () => {
     sideMenuOther.classList.add("side-menu-other-active");
@@ -34,20 +33,46 @@ const closeSideMenuOther = () => {
     sideMenuMain.classList.remove("side-menu-main-hide");
 };
 
-const handleClickSideMenu = (event) => {
-    const isAmazonMusic = event.target === amazonMusic;
-    if (isAmazonMusic) {
-        if (!amazonMusic.classList.contains("side-menu-other-active")) {
-            openSideMenuOther();
-        }
+const handleAmazonMusicClick = () => {
+    if (!amazonMusic.classList.contains("side-menu-other-active")) {
+        openSideMenuOther();
+        sideMenu.classList.add("amazon-music-hide");
     }
+};
 
-    const isGoBackMainMenu = event.target === goBackMainMenu;
-    console.log(isGoBackMainMenu);
-    if (isGoBackMainMenu) {
+const handleGoBackMainMenuClick = () => {
+    return () => {
         closeSideMenuOther();
+        sideMenu.classList.remove("amazon-music-hide");
+
+        if (sideMenuReadersBook) {
+            sideMenuReadersBook.classList.remove("side-menu-other-active");
+        }
+    };
+};
+
+const handleClickSideMenu = (event) => {
+    if (event.target === amazonMusic) {
+        handleAmazonMusicClick();
+    } else if (Array.from(goBackMainMenu).includes(event.target)) {
+        const index = Array.from(goBackMainMenu).indexOf(event.target);
+        handleGoBackMainMenuClick(index)();
     }
 };
 
 amazonMusic.addEventListener("click", handleClickSideMenu);
-goBackMainMenu.addEventListener("click", handleClickSideMenu);
+goBackMainMenu.forEach((item, index) => {
+    item.addEventListener("click", handleGoBackMainMenuClick(index));
+});
+
+const readersBooks = document.getElementById("readers-books");
+const sideMenuReadersBook = document.querySelector(".side-menu-readers-book");
+
+const handleReadersBooksClick = () => {
+    if (!sideMenuReadersBook.classList.contains("side-menu-other-active")) {
+        sideMenuReadersBook.classList.add("side-menu-other-active");
+        sideMenu.classList.add("amazon-music-hide");
+    }
+};
+
+readersBooks.addEventListener("click", handleReadersBooksClick);
