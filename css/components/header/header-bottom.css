@@ -3,7 +3,7 @@
     top: 0;
     min-width: 365px;
     background-color: var(--white-color);
-    overflow-X: hidden;
+    overflow-x: hidden;
     height: 100vh;
     transform: translateX(-366px);
     opacity: 0;
@@ -175,13 +175,26 @@
     display: none;
 }
 
-
-
-
-
-
+.side-menu-list-all {
+    height: 0;
+    opacity: 0;
+    z-index: -1;
+    transition: height 0.5s ease-in-out, opacity 0.3s ease-in-out;
+}
+.side-menu-list-all-active {
+    z-index: 0;
+    opacity: 1;
+}
+.open-all-list-active::after {
+    rotate: -90deg;
+}
 .side-menu-other,
-.side-menu-readers-book {
+.side-menu-readers-book,
+.side-menu-amazon-appstore,
+.side-menu-electronic,
+.side-menu-computers,
+.side-menu-smart-home,
+.side-menu-arts-crafts {
     position: absolute;
     top: 52px;
     background-color: var(--white-color);
@@ -240,10 +253,3 @@
 }
 .side-menu-title {
 }
-
-
-
-
-
-
-

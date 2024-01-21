@@ -140,3 +140,73 @@ elements.forEach((element) => {
             checkAllProcessed();
         });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function toggleMenu() {
+    var sideMenuListAll = document.querySelector(".side-menu-list-all");
+
+    if (
+        sideMenuListAll.style.height === "0px" ||
+        sideMenuListAll.style.height === ""
+    ) {
+        sideMenuListAll.style.height = sideMenuListAll.scrollHeight + "px";
+    } else {
+        sideMenuListAll.style.height = "0";
+    }
+}
+
+
+
+
+
+
+const openShopDepartmentAllList = () => {
+    sideMenuAllList.classList.toggle("side-menu-list-all-active");
+    shopDepartmentAllList.classList.toggle("open-all-list-active");
+
+    const isOpen = shopDepartmentAllList.classList.contains(
+        "open-all-list-active"
+    );
+    shopDepartmentAllList.textContent = isOpen ? "See Less" : "See All";
+
+    sideMenuAllList.style.height = isOpen
+        ? sideMenuAllList.scrollHeight + "px"
+        : "0";
+
+    // Додавання слухача для події transitionend
+    sideMenuAllList.addEventListener(
+        "transitionend",
+        () => {
+            // Перевірка, чи елемент прихований, і встановлення max-height для плавності
+            sideMenuAllList.style.height = isOpen
+                ? sideMenuAllList.scrollHeight + "px"
+                : "0";
+        },
+        { once: true }
+    );
+};
