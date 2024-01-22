@@ -175,7 +175,8 @@
     display: none;
 }
 
-.side-menu-list-all {
+.side-menu-list-all,
+.side-menu-programs-feature {
     height: 0;
     opacity: 0;
     z-index: -1;
@@ -194,7 +195,28 @@
 .side-menu-electronic,
 .side-menu-computers,
 .side-menu-smart-home,
-.side-menu-arts-crafts {
+.side-menu-arts-crafts,
+.side-menu-automotive,
+.side-menu-baby,
+.side-menu-beauty-personal-care,
+.side-menu-womens-fashion,
+.side-menu-mens-fashion,
+.side-menu-girls-fashion,
+.side-menu-boys-fashion,
+.side-menu-health-household,
+.side-menu-home-kitchen,
+.side-menu-industrial-scientific,
+.side-menu-luggage,
+.side-menu-movies-television,
+.side-menu-pet-supplies,
+.side-menu-software,
+.side-menu-sports-outdoors,
+.side-menu-tools-improvement,
+.side-menu-toys-games,
+.side-menu-video-games,
+.side-menu-gift-cards,
+.side-menu-amazon-live,
+.side-menu-international-shopping {
     position: absolute;
     top: 52px;
     background-color: var(--white-color);
@@ -250,6 +272,4 @@
     background-position: 41% 71%;
     margin: 0 10px 0 0;
     pointer-events: none;
-}
-.side-menu-title {
 }
