@@ -1,20 +1,20 @@
 .side-menu {
-    position: fixed;
-    top: 0;
-    min-width: 365px;
+    bottom: 0;
     background-color: var(--white-color);
-    overflow-x: hidden;
-    height: 100vh;
-    transform: translateX(-366px);
     opacity: 0;
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-out;
+    width: 365px;
+    position: fixed;
+    top: 0;
+    transform: translateX(-380px);
+    z-index: 3;
 }
 
 .side-menu-active {
     transform: translate(0);
     opacity: 1;
     z-index: 2;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 .side-menu-close {
@@ -49,15 +49,6 @@
 .sell,
 .side-menu-button {
     padding: 8px 10px;
-}
-
-.registry {
-}
-.service {
-}
-.gift {
-}
-.sell {
 }
 
 .sign-in {
@@ -182,13 +173,16 @@
     z-index: -1;
     transition: height 0.5s ease-in-out, opacity 0.3s ease-in-out;
 }
+
 .side-menu-list-all-active {
     z-index: 0;
     opacity: 1;
 }
+
 .open-all-list-active::after {
     rotate: -90deg;
 }
+
 .side-menu-other,
 .side-menu-readers-book,
 .side-menu-amazon-appstore,
@@ -218,25 +212,44 @@
 .side-menu-amazon-live,
 .side-menu-international-shopping {
     position: absolute;
-    top: 52px;
+    top: 0;
     background-color: var(--white-color);
     width: 365px;
     bottom: 0;
     opacity: 0;
-    transform: translateX(365px);
+    transform: translateX(0);
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.side-menu-other-all {
+    position: absolute;
+    top: 53px;
+    bottom: 0;
+    background-color: transparent;
+    transform: translateX(370px);
+    pointer-events: none;
 }
 
 .side-menu-other-active {
     z-index: 3;
     opacity: 1;
-    transform: translateX(0);
+    transform: translateX(-370px);
+    pointer-events: all;
+    overflow-y: auto;
 }
 
 .side-menu-main {
-    opacity: 1;
+    position: fixed;
+    top: 53px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--white-color);
+    overflow-y: scroll;
     transform: translateX(0);
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    opacity: 1;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    z-index: 1;
 }
 
 .side-menu-main-hide {
