@@ -6,3 +6,4 @@ import "./components/custom-side-menu.js";
 import "./components/custom-slider.js";
 import "./components/custom-go-top.js";
 import "./components/custom-sign-in-dropdown.js";
+import "./components/custom-language-change.js";
