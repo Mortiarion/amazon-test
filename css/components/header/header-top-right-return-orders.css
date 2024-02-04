@@ -78,13 +78,16 @@
     border-radius: 8px;
 }
 
+.new-sign-in-customer {
+    margin: 0 auto 10px;
+}
+
 .new-customer {
     color: #333;
-    margin: 0 auto 10px;
     font-size: 11px;
 }
 
-.new-customer a {
+.new-customer-start {
     color: #05a;
     font-size: 11px;
 }

@@ -1,5 +1,33 @@
 {
     "deliver": "Доставити до",
     "region": "України",
-    "selected": "Усі"
+    "selected": "Усі",
+    "changeLanguage": "Змінити мову",
+    "learnMore": "Вивчайте більше",
+    "changeСurrency": "Змінна валюти",
+    "learnMore1": "Вивчайте більше",
+    "dollar": "$ - USD - долар США",
+    "changeDollar": "Змінити",
+    "flagShoppong": "Ви робите покупки",
+    "flagAmazon": "Amazon.com",
+    "changeRegionCountry": "Змінити країну/регіон.",
+    "signInTextFirst": "Привіт, увійдіть",
+    "signInTextSecond": "Обліковий запис і списки",
+    "signInLinkDropdown": "Увійти",
+    "newCustomer": "Новий клієнт?",
+    "newCustomerStart": "Починай тут.",
+
+    "signYourListTitle": "Ваші списки",
+    "signYourListLang1": "Створіть список",
+    "signYourListLang2": "Знайдіть список або реєстр",
+
+    "textUkLanguage3": "",
+    "textUkLanguage4": "",
+    "textUkLanguage5": "",
+    "textUkLanguage6": "",
+    "textUkLanguage7": "",
+    "textUkLanguage8": "",
+    "textUkLanguage9": "",
+    "textUkLanguage10": ""
+   
 }

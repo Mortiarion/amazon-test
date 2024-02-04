@@ -115,3 +115,27 @@ document.addEventListener("DOMContentLoaded", async function () {
         });
     });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"choose-location": "Choose your location",
+    "location-text": "Delivery options and delivery speeds may vary for different locations",
+    "location-button": "Sign in to see your addresses",
+    "divider-break-text": "or enter a US zip code",
+    "apply": "Apply",
+    "divider-break-texts": "or",
+    "selected-country": "Ukraine",
+    "done": "Done"

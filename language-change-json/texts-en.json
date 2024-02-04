@@ -2,13 +2,23 @@
     "deliver": "Deliver to",
     "region": "Ukraine",
     "selected": "All",
-    "choose-location": "Choose your location",
-    "location-text": "Delivery options and delivery speeds may vary for different locations",
-    "location-button": "Sign in to see your addresses",
-    "divider-break-text": "or enter a US zip code",
-    "apply": "Apply",
-    "divider-break-texts": "or",
-    "selected-country": "Ukraine",
-    "done": "Done"
+    "changeLanguage": "Change language",
+    "learnMore": "Learn more",
+    "changeСurrency": "Change currency",
+    "learnMore1": "Learn more",
+    "dollar": "$ - USD - US Dollar",
+    "changeDollar": "Change",
+    "flagShoppong": "You are shopping on",
+    "flagAmazon": "Amazon.com",
+    "changeRegionCountry": "Change country/region.",
+    "signInTextFirst": "Hello, sign in",
+    "signInTextSecond": "Account & Lists",
+    "signInLinkDropdown": "Sign in",
+    "newCustomer": "New customer?",
+    "newCustomerStart": "Start here.",
 
+    "signYourListTitle": "Your Lists",
+    "signYourListLang1": "Create a list",
+    "signYourListLang2": "Find a List or Registry"
+    
 }
