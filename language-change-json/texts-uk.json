@@ -43,7 +43,7 @@
     "service": "Служба підтримки клієнтів",
     "gift": "Подарункові картки",
     "sell": "Продавати",
-    
+
     "textLanguage16": "Всі",
     "textLanguage17": "Привіт, увійдіть",
     "textLanguage15": "Цифровий контент та пристрої",
@@ -75,6 +75,19 @@
     "toysGames": "Іграшки та ігри",
     "videoGames": "Відеоігри",
 
-    "openAllList": "Показати Всі"
+    "openAllList": "Показати Всі",
 
+    "textLanguage19": "Програми та функції",
+    "giftCards": "Подарункові картки",
+    "shopInterest": "Покупки за інтересами",
+    "amazonLive": "Amazon Live",
+    "internationalShopping": "Міжнародні покупки",
+    "amazonSecondChance": "Другий шанс від Amazon",
+
+    "textLanguage20": "Довідка та налаштування",
+    "yourAccount": "Ваш обліковий запис",
+    "textLanguage21": "Українська",
+    "textLanguage22": "Україна",
+    "customerService": "Служба підтримки клієнтів",
+    "textLanguage23": "Увійти"
 }

@@ -136,6 +136,29 @@ async function changeLanguage(language) {
         languageTexts.videoGames;
     document.querySelector(".open-all-list").textContent =
         languageTexts.openAllList;
+    document.querySelector(".text-language19").textContent =
+        languageTexts.textLanguage19;
+    document.querySelector(".gift-cards").textContent = languageTexts.giftCards;
+    document.querySelector(".shop-interest").textContent =
+        languageTexts.shopInterest;
+    document.querySelector(".amazon-live").textContent =
+        languageTexts.amazonLive;
+    document.querySelector(".international-shopping").textContent =
+        languageTexts.internationalShopping;
+    document.querySelector(".amazon-second-chance").textContent =
+        languageTexts.amazonSecondChance;
+    document.querySelector(".text-language20").textContent =
+        languageTexts.textLanguage20;
+    document.querySelector(".your-account").textContent =
+        languageTexts.yourAccount;
+    document.querySelector(".text-language21").textContent =
+        languageTexts.textLanguage21;
+    document.querySelector(".text-language22").textContent =
+        languageTexts.textLanguage22;
+    document.querySelector(".customer-service").textContent =
+        languageTexts.customerService;
+    document.querySelector(".text-language23").textContent =
+        languageTexts.textLanguage23;
 }
 
 englishCheckbox.addEventListener("change", async function () {
