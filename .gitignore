@@ -1,2 +1,4 @@
 .vscode
+.idea
+.temporary_cache
 .none.js
