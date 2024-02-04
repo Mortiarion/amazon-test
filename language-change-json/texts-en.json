@@ -19,6 +19,61 @@
 
     "signYourListTitle": "Your Lists",
     "signYourListLang1": "Create a list",
-    "signYourListLang2": "Find a List or Registry"
-    
+    "signYourListLang2": "Find a List or Registry",
+
+    "textLanguage14": "Your Account",
+    "textLanguage3": "Account",
+    "textLanguage4": "Orders",
+    "textLanguage5": "Recommendations",
+    "textLanguage6": "Browsing History",
+    "textLanguage7": "Watchlist",
+    "textLanguage8": "Video Purchases & Rentals",
+    "textLanguage9": "Kindle Unlimited",
+    "textLanguage10": "Content & Devices",
+    "textLanguage11": "Subscribe & Save Items",
+    "textLanguage12": "Memberships & Subscriptions",
+    "textLanguage13": "Music Library",
+
+    "return": "Returns",
+    "orders": "& Orders",
+    "basketText": "Cart",
+
+    "deals": "Today`s Deals",
+    "registry": "Registry",
+    "service": "Customer Service",
+    "gift": "Gift Cards",
+    "sell": "Sell",
+
+    "textLanguage16": "All",
+    "textLanguage17": "Hello, sign in",
+    "textLanguage15": "Digital Content & Devices",
+    "amazonMusic": "Amazon Music",
+    "readersBooks": "Kindle E-readers & Books",
+    "amazonApps": "Amazon Appstore",
+
+    "textLanguage18": "Shop By Department",
+    "electronic": "Electronics",
+    "computers": "Computers",
+    "smartHome": "Smart Home",
+    "artsCrafts": "Arts & Crafts",
+
+    "automotive": "Automotive",
+    "baby": "Baby",
+    "beautyPersonalCare": "Beauty and Personal Care",
+    "womensFashion": "Women's Fashion",
+    "mensFashion": "Men's Fashion",
+    "girlsFashion": "Girl's Fashion",
+    "boysFashion": "Boy's Fashion",
+    "healthHousehold": "Health and Household",
+    "homeKitchen": "Home and Kitchen",
+    "industrialScientific": "Industrial and Scientific",
+    "luggage": "Luggage",
+    "moviesTelevision": "Movies & Television",
+    "petSupplies": "Pet Supplies",
+    "software": "Software",
+    "sportsOutdoors": "Sports and Outdoors",
+    "toysGames": "Toys and Games",
+    "videoGames": "Video Games",
+
+    "openAllList": "See All"
 }
