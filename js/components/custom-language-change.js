@@ -300,6 +300,70 @@ async function changeLanguage(language) {
         languageTexts.textLanguage87;
     document.querySelector(".text-language88").textContent =
         languageTexts.textLanguage88;
+    document.querySelector(".text-language89").textContent =
+        languageTexts.textLanguage89;
+    document.querySelector(".text-language90").textContent =
+        languageTexts.textLanguage90;
+    document.querySelector(".text-language91").textContent =
+        languageTexts.textLanguage91;
+    document.querySelector(".text-language92").textContent =
+        languageTexts.textLanguage92;
+    document.querySelector(".text-language93").textContent =
+        languageTexts.textLanguage93;
+    document.querySelector(".text-language94").textContent =
+        languageTexts.textLanguage94;
+    document.querySelector(".text-language95").textContent =
+        languageTexts.textLanguage95;
+    document.querySelector(".text-language96").textContent =
+        languageTexts.textLanguage96;
+    document.querySelector(".text-language97").textContent =
+        languageTexts.textLanguage97;
+    document.querySelector(".text-language98").textContent =
+        languageTexts.textLanguage98;
+    document.querySelector(".text-language99").textContent =
+        languageTexts.textLanguage99;
+    document.querySelector(".text-language100").textContent =
+        languageTexts.textLanguage100;
+    document.querySelector(".text-language101").textContent =
+        languageTexts.textLanguage101;
+    document.querySelector(".text-language102").textContent =
+        languageTexts.textLanguage102;
+    document.querySelector(".text-language103").textContent =
+        languageTexts.textLanguage103;
+    document.querySelector(".text-language104").textContent =
+        languageTexts.textLanguage104;
+    document.querySelector(".text-language105").textContent =
+        languageTexts.textLanguage105;
+    document.querySelector(".text-language106").textContent =
+        languageTexts.textLanguage106;
+    document.querySelector(".text-language107").textContent =
+        languageTexts.textLanguage107;
+    document.querySelector(".text-language108").textContent =
+        languageTexts.textLanguage108;
+    document.querySelector(".text-language109").textContent =
+        languageTexts.textLanguage109;
+    document.querySelector(".text-language110").textContent =
+        languageTexts.textLanguage110;
+    document.querySelector(".text-language111").textContent =
+        languageTexts.textLanguage111;
+    document.querySelector(".text-language112").textContent =
+        languageTexts.textLanguage112;
+    document.querySelector(".text-language113").textContent =
+        languageTexts.textLanguage113;
+    document.querySelector(".text-language114").textContent =
+        languageTexts.textLanguage114;
+    document.querySelector(".text-language115").textContent =
+        languageTexts.textLanguage115;
+    document.querySelector(".text-language116").textContent =
+        languageTexts.textLanguage116;
+    document.querySelector(".text-language117").textContent =
+        languageTexts.textLanguage117;
+    document.querySelector(".text-language118").textContent =
+        languageTexts.textLanguage118;
+    document.querySelector(".text-language119").textContent =
+        languageTexts.textLanguage119;
+    document.querySelector(".text-language120").textContent =
+        languageTexts.textLanguage120;
 }
 
 englishCheckbox.addEventListener("change", async function () {
