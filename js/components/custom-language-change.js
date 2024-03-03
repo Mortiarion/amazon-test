@@ -1,11 +1,8 @@
-// const languageMenu = document.querySelector(".language-menu");
 const languageName = document.querySelector(".languages-name");
-console.log(languageName);
 const englishCheckbox = document.getElementById("englishCheckbox");
 const ukraineCheckbox = document.getElementById("ukraineCheckbox");
 
 const dataLang = document.querySelectorAll("[data-lang]");
-console.log(dataLang);
 
 document.addEventListener("DOMContentLoaded", function () {
     const savedLanguage = localStorage.getItem("selectedLanguage");
@@ -19,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 ukraineCheckbox.addEventListener("change", async function () {
     if (this.checked) {
-        console.log("checked UA");
         languageName.textContent = "UA";
         englishCheckbox.checked = false;
         await changeLanguage("ua");
@@ -29,7 +25,6 @@ ukraineCheckbox.addEventListener("change", async function () {
 
 englishCheckbox.addEventListener("change", async function () {
     if (this.checked) {
-        console.log("checked EN");
         languageName.textContent = "EN";
         ukraineCheckbox.checked = false;
         await changeLanguage("en");
@@ -43,13 +38,10 @@ async function loadLanguageTexts(language) {
     console.log(data);
     return data;
 }
-// loadLanguageTexts();
 async function changeLanguage(language) {
     const languageTexts = await loadLanguageTexts(language);
-    console.log(languageTexts);
     dataLang.forEach((element) => {
         const key = element.getAttribute("data-lang");
         element.textContent = languageTexts[key];
     });
 }
-// changeLanguage();
