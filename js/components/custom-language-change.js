@@ -35,9 +35,9 @@ englishCheckbox.addEventListener("change", async function () {
 async function loadLanguageTexts(language) {
     const response = await fetch(`language-change-json/texts-${language}.json`);
     const data = await response.json();
-    console.log(data);
     return data;
 }
+
 async function changeLanguage(language) {
     const languageTexts = await loadLanguageTexts(language);
     dataLang.forEach((element) => {
