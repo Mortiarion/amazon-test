@@ -8,3 +8,4 @@ import "./components/custom-go-top.js";
 import "./components/custom-sign-in-dropdown.js";
 import "./components/custom-language-change.js";
 import "./components/mobile/custom-swipe-menu.js";
+import "./components/mobile/custom-slider-infinity.js";

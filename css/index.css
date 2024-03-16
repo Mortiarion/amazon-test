@@ -3,7 +3,8 @@
 @import url("./components/overlay.css");
 @import url("./components/main/main.css");
 @import url("./components/footer/footer.css");
-@import url("./media/media.css");
+@import url("./components/mobile/media/media.css");
+@import url("./components/mobile/custom-slider-infinity.css");
 
 :root {
     --nav-top-bg: #131921;
@@ -20,6 +21,7 @@
     --hover-search-btn: #f3a847;
     --cart-count: #f08804;
     --mobile-top-bg: #232f3e;
+    --mobile-footer-bg: #37475a;
 }
 
 body {

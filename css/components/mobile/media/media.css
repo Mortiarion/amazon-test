@@ -32,8 +32,9 @@
     .button-sidemenu-img,
     .mobile-avatar,
     .mobile-cart,
-    .mobile-search {
-        background-image: url(./../../img/new-nav-sprite-global-2x.png);
+    .mobile-search,
+    .mobile-footer button::before {
+        background-image: url(./../../../../img/new-nav-sprite-global-2x.png);
         background-repeat: no-repeat;
         background-size: 275px;
     }
@@ -112,6 +113,24 @@
     .swipe-menu li a {
         white-space: nowrap;
     }
+    .mobile-footer {
+        background-color: var(--mobile-footer-bg);
+        padding: 5px;
+    }
+    .mobile-footer button {
+        font-size: 13px;
+        color: var(--white-color);
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        position: relative;
+    }
+    .mobile-footer button::before {
+        content: "";
+        width: 20px;
+        height: 20px;
+        background-position: -76px -340px;
+    }
 }
 
 @media (min-width: 375px) {
@@ -124,6 +143,9 @@
 }
 
 @media (min-width: 1024px) {
+    section .slider-container {
+        margin: 0 auto;
+    }
 }
 
 @media (min-width: 1440px) {
