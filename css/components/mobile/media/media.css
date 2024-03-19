@@ -105,10 +105,11 @@
         background-position: -73px -239px;
     }
     .swipe-menu {
-        overflow-x: hidden;
+        overflow-x: auto;
         display: flex;
         gap: 20px;
         padding: 0 10px;
+        scrollbar-width: none;
     }
     .swipe-menu li a {
         white-space: nowrap;
