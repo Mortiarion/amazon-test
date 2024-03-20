@@ -1,34 +1,29 @@
 .infinity-slider {
-    /* padding-bottom: 105px; */
-    position: relative;
     overflow: hidden;
 }
 
 .slider-container {
-    max-width: 1000px;
-    width: clamp(280px, 100%, 874px);
-    position: relative;
+    width: clamp(320px, 100%, 1000px);
 }
 
 .slider-wrapper {
     position: relative;
-    aspect-ratio: 1;
+    min-height: 400px;
+    display: flex;
+    overflow: hidden;
 }
 
 .slider-wrapper img {
     height: 100%;
+    object-fit: fill;
+    width: 100%;
 }
 
 .slide-mobile {
     width: 100%;
-    height: 100%;
     position: absolute;
     transition: transform 1s ease-in-out, visibility 1s ease-in-out;
     visibility: hidden;
-}
-
-.slides-content {
-    height: 100%;
 }
 
 .slide-mobile[data-x="0"] {
@@ -43,7 +38,7 @@
     padding: 5px;
     position: absolute;
     top: 0;
-    bottom: 26.5%;
+    bottom: 53.6%;
     display: flex;
     align-items: center;
     z-index: 2;
@@ -55,16 +50,16 @@
 
 .slider-carts {
     display: flex;
-    transform: translateY(-85px);
     gap: 10px;
     padding: 0 10px 8px;
     overflow-x: scroll;
     overflow-y: hidden;
     scrollbar-width: thin;
-    position: relative;
-    z-index: 1;
-    /* background: linear-gradient(-180deg, rgba(234, 237, 237, 0), #e3e6e6); */
-    /* backdrop-filter: blur(3px); */
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 3;
 }
 
 .cart-wrapper {
@@ -88,23 +83,13 @@
 
 .blur-block {
     position: absolute;
-    right: 0;
-    left: 0;
-    top: 30px;
     bottom: 0;
-    /* z-index: 1; */
-    /* background-color: #e3e6e6; */
-    /* width: 100%; */
-    /* height: 100%; */
-    background: linear-gradient(-180deg, rgba(234, 237, 237, 0), #e3e6e6);
-    backdrop-filter: blur(3px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* height: 180px; */
-    /* width: inherit; */
+    z-index: 2;
+    height: 175px;
+    width: 100%;
+    background: linear-gradient(
+        -180deg,
+        rgba(213, 219, 219, 0) 0%,
+        #e3e6e6 33%
+    );
 }
-
-/* .main.mobile {
-    background-color: rgb(179, 209, 209);
-} */

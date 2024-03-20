@@ -135,17 +135,29 @@
 }
 
 @media (min-width: 375px) {
+    .slider-wrapper {
+        height: 435px;
+    } 
 }
 
 @media (min-width: 425px) {
+    .slider-wrapper {
+        height: 465px;
+    } 
 }
 
 @media (min-width: 768px) {
+    .slider-wrapper {
+        height: 685px;
+    }
 }
 
 @media (min-width: 1024px) {
     section .slider-container {
         margin: 0 auto;
+    }
+    .slider-wrapper {
+        height: 835px;
     }
 }
 
