@@ -22,6 +22,10 @@
     --cart-count: #f08804;
     --mobile-top-bg: #232f3e;
     --mobile-footer-bg: #37475a;
+    --button-sign-in-section: #0F1111;
+    --button-sign-out-section-bg: #ffd814;
+    --sign-in-bottom-link: #007185;
+    --h3-goods-title: #111111;
 }
 
 body {
@@ -101,12 +105,6 @@ p {
     padding: 0;
     margin: 0;
 }
-
-/* input[type="text"]:focus {
-    background-color: #f7feff;
-    border-color: #007185;
-    box-shadow: 0 0 0 3px #c8f3fa, 0 1px 2px rgba(15, 17, 17, 0.15) inset;
-} */
 
 ul,
 ol {
