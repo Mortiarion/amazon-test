@@ -13,7 +13,7 @@ positioning();
 
 window.addEventListener("resize", positioning);
 
-// setInterval(moveRight, 5000);
+setInterval(moveRight, 5000);
 
 function positioning() {
     width = sliderWrapper.clientWidth;
@@ -54,6 +54,9 @@ function moveRight() {
 
 function moveLeft() {
     const now = new Date().getTime();
+    if (now - lastClickTime < delay) {
+        return;
+    }
 
     slides.forEach((slide) => {
         const x = Number(slide.getAttribute("data-x"));
