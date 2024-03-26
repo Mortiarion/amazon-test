@@ -245,11 +245,13 @@
         background-color: var(--mobile-top-bg);
         display: flex;
         padding: 20px;
+        gap: 20px;
+        justify-content: center;
     }
     .footer-mobile-lists ul {
         display: flex;
         flex-direction: column;
-        width: 50%;
+        max-width: 140px;
         font-size: 15px;
         gap: 10px;
     }
@@ -260,10 +262,71 @@
     .footer-mobile-link {
         display: flex;
         gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 50px;
     }
     .footer-mobile-link a {
         color: var(--deliver-color);
         font-size: 14px;
+    }
+    .footer-mobile-flag,
+    .footer-mobile-globus {
+        position: relative;
+        padding-left: 25px;
+    }
+    .footer-mobile-globus {
+        padding-left: 20px;
+    }
+    .footer-mobile-flag::after,
+    .footer-mobile-globus::after {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 2px;
+        width: 18px;
+        height: 12px;
+        background-image: url("./../../../../img/nav-sprite-global-country.png");
+        background-position: -54px -108px;
+    }
+    .footer-mobile-globus::after {
+        width: 16px;
+        height: 15px;
+        top: 0;
+        background-position: -77px -51px;
+    }
+    .footer-mobile-customer {
+        color: var(--white-color);
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+        gap: 10px;
+    }
+    .footer-mobile-conditional {
+        font-size: 11px;
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 5px;
+        column-gap: 20px;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    .footer-mobile-conditional a {
+        color: var(--deliver-color);
+    }
+    .footer-mobile-conditional span {
+        background-image: url("./../../../../img/nav-sprite-global-all.png");
+        width: 32px;
+        height: 16px;
+        display: block;
+        background-position: -135px -379px;
+    }
+    .footer-mobile-copyright {
+        color: var(--deliver-color);
+        font-size: 11px;
+        display: flex;
+        justify-content: center;
     }
 }
 
@@ -291,6 +354,19 @@
     }
     .slider-wrapper {
         height: 835px;
+    }
+    .mobile-container {
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+    .goods-wrapper {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    header .mobile-container,
+    footer .mobile-container {
+        max-width: 100%;
+        margin: 0;
     }
 }
 
