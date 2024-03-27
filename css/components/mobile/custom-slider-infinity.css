@@ -24,12 +24,14 @@
 .slide-mobile {
     width: 100%;
     position: absolute;
-    transition: transform 1s ease-in-out, visibility 1s ease-in-out;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
     /* visibility: hidden; */
+    opacity: 0;
 }
 
 .slide-mobile[data-x="0"] {
     /* visibility: visible; */
+    opacity: 1;
 }
 
 #left-btn,
