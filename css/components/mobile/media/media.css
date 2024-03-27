@@ -9,12 +9,10 @@
 
 @media (min-width: 320px) {
     body .wrapper {
-        /* display: none; */
-        display: block;
+        display: none;
     }
     body .wrapper.mobile {
-        /* display: flex; */
-        display: none;
+        display: flex;
     }
     .mobile-top,
     .mobile-center,
