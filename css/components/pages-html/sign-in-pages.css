@@ -1,0 +1,175 @@
+.container-sign-in {
+    padding: 14px 20px;
+}
+
+.sign-in-page-wrapper {
+    margin: 0 auto 30px;
+    padding: 20px;
+    border: 2px solid var(--border-hover);
+    border-radius: 8px;
+}
+
+#sign-in-page h3 {
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.logo-sign-in {
+    background-image: url("./../../../img/amazon-pages-all.png");
+    display: flex;
+    width: 115px;
+    height: 45px;
+    background-position: 0px -120px;
+    margin: 0 auto 20px;
+}
+
+.form-sign-in-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-sign-in-wrapper label {
+    font-size: 13px;
+    font-weight: 700;
+    pointer-events: none;
+}
+
+.form-sign-in-wrapper input[type="text"] {
+    border: 1px solid var(--bg-custom-select);
+    border-radius: 3px;
+    height: 31px;
+    margin-bottom: 20px;
+}
+
+.sign-in-page-wrapper a {
+    color: var(--sign-in-page-link);
+    font-size: 13px;
+}
+
+.sign-in-form-button {
+    background-color: var(--button-sign-out-section-bg);
+    width: 100%;
+    height: 31px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.privacy-notice {
+    margin-bottom: 20px;
+}
+
+.keep-details {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.keep-details label {
+    pointer-events: none;
+}
+
+.keep-details button {
+    color: var(--sign-in-page-link);
+    position: relative;
+    padding-right: 15px;
+}
+
+.keep-details button::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 2px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid var(--selected-triangle);
+}
+
+.divide {
+    border: 1px solid var(--deliver-color);
+    position: relative;
+    margin-bottom: 30px;
+    border-radius: 8px;
+}
+
+.divide span {
+    position: absolute;
+    font-size: 12px;
+    color: var(--selected-triangle);
+    background-color: var(--white-color);
+    top: -7px;
+    left: 37%;
+    white-space: nowrap;
+}
+
+.create-account {
+    border: 1px solid var(--deliver-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px 0 rgba(213, 217, 217, 0.5);
+    width: 100%;
+    padding: 5px 0;
+}
+
+.create-account a,
+.sign-in-form-button a {
+    color: var(--h3-goods-title);
+}
+
+.form-line {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.14),
+        rgba(0, 0, 0, 0.03) 3px,
+        transparent
+    );
+    margin-bottom: -18px;
+}
+
+.form-line::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 44px;
+    background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0), #fff);
+}
+
+.help {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.help a {
+    color: var(--sign-in-page-link);
+    font-size: 11px;
+}
+
+.copiring {
+    font-size: 11px;
+    text-align: center;
+}
+
+@media (min-width: 320px) {
+    .sign-in-page-wrapper {
+        width: inherit;
+    }
+}
+
+@media (min-width: 425px) {
+    .sign-in-page-wrapper {
+        width: 80%;
+    }
+}
+
+@media (min-width: 768px) {
+    .sign-in-page-wrapper {
+        width: 306px;
+    }
+}

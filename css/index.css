@@ -5,6 +5,7 @@
 @import url("./components/footer/footer.css");
 @import url("./components/mobile/media/media.css");
 @import url("./components/mobile/custom-slider-infinity.css");
+@import url("./components/pages-html/sign-in-pages.css");
 
 :root {
     --nav-top-bg: #131921;
@@ -28,6 +29,7 @@
     --h3-goods-title: #111111;
     --transparent-bg: #0f1111;
     --footer-mobile-bg: #0d141e;
+    --sign-in-page-link: #0066c0;
 }
 
 body {

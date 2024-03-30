@@ -1,5 +1,5 @@
 .infinity-slider {
-    overflow: hidden;
+    /* overflow: hidden; */
     border-bottom: 2px solid var(--bg-custom-select);
 }
 
@@ -24,14 +24,12 @@
 .slide-mobile {
     width: 100%;
     position: absolute;
-    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-    /* visibility: hidden; */
-    opacity: 0;
+    transition: transform 1s ease-in-out, visibility 1s ease-in-out;
+    visibility: hidden;
 }
 
 .slide-mobile[data-x="0"] {
-    /* visibility: visible; */
-    opacity: 1;
+    visibility: visible;
 }
 
 #left-btn,
